@@ -1,17 +1,59 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import Garage from './Garage.js';
+import Car from './Car.js';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+const just = (
+  <table>
+    <tr>
+      <th>Name</th>
+    </tr>
+    <tr>
+      <td>John</td>
+    </tr>
+    <tr>
+      <td>Elsa</td>
+    </tr>
+  </table>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+const myElement = <h1>React is {5 + 5} times better with JSX</h1>;
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(myElement);
+
+const table = document.getElementById('just');
+const just1 = ReactDOM.createRoot(table);
+just1.render(just)
+
+
+const title = document.getElementById('head');
+const head = ReactDOM.createRoot(title);
+head.render(<h1>Just Making A Website That's Superb!</h1>)
+
+const justice = document.getElementById('justice');
+const garage = ReactDOM.createRoot(justice);
+garage.render(<Garage />);
+
+const jut = ReactDOM.createRoot(document.getElementById('jut'));
+jut.render(<Car brand = 'Volvo' />);
+
+function MissedGoal() {
+  return <h1>YOU MISSED!</h1>;
+}
+
+function MadeGoal() {
+  return <h1>IT'S A GOAL!</h1>;
+}
+
+function Goal(props) {
+  const isGoal = props.isGoal;
+ return (
+  <>
+    { isGoal ? <MadeGoal/> : <MissedGoal/> }
+  </>
+ );
+}
+
+const jet = ReactDOM.createRoot(document.getElementById('jet'));
+jet.render(<Goal isGoal= {true} />);
