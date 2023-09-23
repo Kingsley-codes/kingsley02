@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import Garage from './Garage.js';
 import Car from './Car.js';
+import FavoriteColor from './Button.js';
+
 
 const just = (
   <table>
@@ -57,3 +59,7 @@ function Goal(props) {
 
 const jet = ReactDOM.createRoot(document.getElementById('jet'));
 jet.render(<Goal isGoal= {true} />);
+
+
+const jest = ReactDOM.createRoot(document.getElementById('jest'));
+jest.render(<FavoriteColor />);
