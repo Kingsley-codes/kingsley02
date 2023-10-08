@@ -3,6 +3,9 @@ import ReactDOM from 'react-dom/client';
 import Garage from './Garage.js';
 import Car from './Car.js';
 import FavoriteColor from './Button.js';
+import NewCar from './NewCar.js';
+import './index.css';
+
 
 
 const just = (
@@ -19,7 +22,7 @@ const just = (
   </table>
 );
 
-const myElement = <h1>React is {5 + 5} times better with JSX</h1>;
+const myElement = <h1 className="text-3xl font-bold underline">React is {5 + 5} times better with JSX</h1>;
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(myElement);
@@ -63,3 +66,9 @@ jet.render(<Goal isGoal= {true} />);
 
 const jest = ReactDOM.createRoot(document.getElementById('jest'));
 jest.render(<FavoriteColor />);
+
+
+const jesti = ReactDOM.createRoot(document.getElementById('jesti'));
+jesti.render(<NewCar />);
+
+
